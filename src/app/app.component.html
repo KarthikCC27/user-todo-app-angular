@@ -1,0 +1,22 @@
+<body>
+  <div class="main-container">
+    <div class="route-container">
+      <br>
+      <br>
+      <img
+        src="/assets/user.svg"
+        routerLink="/userlist"
+        (click)="onclickuser()"
+        alt="user"
+      />
+      <br /><br /><br />
+      <img
+        src="/assets/task.svg"
+        routerLink="/tasklist"
+        (click)="onclicktask()"
+        alt="task"
+      />
+    </div>
+    <div class="content-container"><router-outlet></router-outlet></div>
+  </div>
+</body>

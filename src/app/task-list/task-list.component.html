@@ -1,0 +1,28 @@
+<br>
+<div class="task-container">
+  <div class="new-tasks">
+    <label>Add task</label>
+    <input [(ngModel)]="newtask" type="text" #new />
+    <button [disabled]="!isUpdate" (click)="Addtask(new.value)">
+      Add Task
+    </button>
+    <button [disabled]="isUpdate" (click)="editTask(new.value)">OK</button
+    ><br />
+  </div>
+  <div class="userselect">
+    <label>Select User: </label><select (change)="selectedOption($event)">
+      @for(item of users;let index = $index;track index){
+      <option value="{{ index }}">{{ item.uname }}</option>
+      }
+    </select>
+  </div>
+  <div class="task-list">
+    @for(task of users[current_user].task;track $index){
+    <div class="item">
+      <p>{{ task }}</p>  
+      <button id="delbtn" (click)="deleteTask($index)">Delete</button>
+      <button id="updbtn" (click)="updateTask($index)">Edit</button><br /><br />
+    </div>
+    }
+  </div>
+</div>

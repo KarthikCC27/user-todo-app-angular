@@ -1,0 +1,38 @@
+body{
+  padding: 0;
+  margin: 0;
+  
+  background-color: antiquewhite;
+}
+
+.main-container {
+  
+  display: grid;
+  grid-template: "route cont";
+  grid-template-columns: 5% 95%;
+  gap:10px;
+  height: 100vh;
+  width: 100wh;
+  
+}
+
+.route-container {
+  text-align: center;
+  grid-area: route;
+  background-color: rgb(143, 175, 255);
+}
+
+.content-container {
+  grid-area: cont;
+  justify-self: center;
+  background-color: antiquewhite;
+}
+
+img {
+  height: 50px;
+  width: 50px;
+}
+
+img:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,26 @@
+
+
+<div class="form-container">
+  <form #userdetails="ngForm" (ngSubmit)="onSubmit(userdetails)">
+    <label for="uname">Enter Username: </label>
+    <input type="text" name="uname" ngModel />
+    <br>
+    <label for="email">Enter Email: </label>
+    <input type="email" name="email" ngModel /><br>
+    <button pButton type="submit" class="p-button-raised p-button-rounded">Add User</button>
+  </form>
+</div>
+<br><br>
+<table>
+  <tr>
+    <th>Username</th>
+    <th>Email</th>
+  </tr>
+
+  @for(user of users;track $index){
+  <tr>
+    <td>{{ users[$index].uname }}</td>
+    <td>{{ users[$index].email }}</td>
+  </tr>
+  }
+</table>
